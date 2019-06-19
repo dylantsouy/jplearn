@@ -30,7 +30,62 @@
         }
 
         footer {
+            font-size: 2em;
             color: white;
+            animation: myfirst 5s;
+            -moz-animation: myfirst 5s;
+            /* Firefox */
+            -webkit-animation: myfirst 5s;
+            /* Safari and Chrome */
+            -o-animation: myfirst 5s;
+            /* Opera */
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @keyframes myfirst {
+            0% {
+                color: pink;
+            }
+
+            25% {
+                color: rgb(216, 112, 173);
+            }
+
+            50% {
+                color: purple;
+            }
+
+            75% {
+                color: rgb(216, 112, 173);
+            }
+
+            100% {
+                color: pink;
+            }
+        }
+
+        @-webkit-keyframes myfirst {
+
+            0% {
+                color: pink;
+            }
+
+            25% {
+                color: rgb(216, 112, 173);
+            }
+
+            50% {
+                color: purple;
+            }
+
+            75% {
+                color: rgb(216, 112, 173);
+            }
+
+            100% {
+                color: pink;
+            }
         }
 
         .eg {
