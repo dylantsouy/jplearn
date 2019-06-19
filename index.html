@@ -34,11 +34,8 @@
             color: white;
             animation: myfirst 5s;
             -moz-animation: myfirst 5s;
-            /* Firefox */
             -webkit-animation: myfirst 5s;
-            /* Safari and Chrome */
             -o-animation: myfirst 5s;
-            /* Opera */
             animation-iteration-count: infinite;
             -webkit-animation-iteration-count: infinite;
         }
@@ -142,7 +139,7 @@
         .pic {
             min-width: 100%;
             height: 400px;
-            background: url(http://pngimg.com/uploads/teacher/teacher_PNG46.png) no-repeat;
+            background: url(http://pngimg.com/uploads/teacher/teacher_PNG46.png) -30px no-repeat;
             background-size: contain;
             max-height: 100%;
         }
@@ -564,26 +561,26 @@
                     <a
                         href="#"
                         class="arrow left"
-                        v-on:keyup.left='changeIndex(-1);jap(menu[index].tittle)'
-                        v-on:click.prevent='changeIndex(-1);jap(menu[index].tittle)'
+                        @keyup.left='changeIndex(-1);jap(today.tittle)'
+                        @click.prevent='changeIndex(-1);jap(today.tittle)'
                     >↫</a>
                     <div class="menuItem white"></div>
                     <span class="number">{{index +1}}</span>
-                    <span class="type">{{menu[index].type}}</span>
+                    <span class="type">{{today.type}}</span>
                     <a
                         id='title'
                         class="title"
                         target="vue-iron"
                         href="#"
-                        v-on:click.prevent='chineses(menu[index].chinese)'
-                        v-on:keyup.enter='chineses(menu[index].chinese)'
-                        v-on:keyup.space='jap(menu[index].tittle)'
-                    >{{menu[index].tittle}} </a>
+                        @click.prevent='chineses(today.chinese)'
+                        @keyup.enter='chineses(today.chinese)'
+                        @keyup.space='jap(today.tittle)'
+                    >{{today.tittle}} </a>
                     <a
                         href="#"
                         class="arrow right"
-                        v-on:keyup.right='changeIndex(1);jap(menu[index].tittle)'
-                        v-on:click.prevent='changeIndex(1);jap(menu[index].tittle)'
+                        @keyup.right='changeIndex(1);jap(today.tittle)'
+                        @click.prevent='changeIndex(1);jap(today.tittle)'
                     >↬</a>
 
                 </div>
@@ -681,6 +678,11 @@
         let app = new Vue({
             el: '.app',
             data: data,
+            computed: {
+                today() {
+                    return this.menu[this.index]
+                }
+            },
             methods: {
                 chineses: function (trans) {
                     var gg = document.getElementById('title');
