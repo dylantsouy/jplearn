@@ -114,6 +114,19 @@
             margin: 0;
             float: left;
             box-shadow: 0px 10px 5px rgba(0, 0, 0, .5);
+            cursor: pointer;
+        }
+
+        .type:hover {
+
+            opacity: .9;
+        }
+
+        .type:active {
+            transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
         }
 
         .title {
@@ -139,15 +152,17 @@
         .title:hover {
             color: orange;
             background: rgba(255, 255, 255, .8);
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
         }
 
         .title:active {
 
             color: orangered;
-            transform: rotateY(360deg);
-            -webkit-transform: rotateY(360deg);
-            transition-duration: 1.3s;
-            -webkit-transition-duration: 1.3s;
+            transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
 
         }
 
@@ -339,6 +354,13 @@
                 height: 35px;
                 font-size: 15px;
                 line-height: 35px;
+            }
+
+            .title:hover {
+                transform: scale(2);
+                -webkit-transform: scale(2);
+                transition-duration: 0.5s;
+                -webkit-transition-duration: 0.5s;
             }
 
             .title:active {
