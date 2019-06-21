@@ -3,35 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <meta
-        http-equiv="X-UA-Compatible"
-        content="ie=edge"
-    >
-    <link
-        href="https://fonts.googleapis.com/css?family=Mali&display=swap"
-        rel="stylesheet"
-    >
-    <link
-        href="https://fonts.googleapis.com/css?family=Kosugi|Mali&display=swap"
-        rel="stylesheet"
-    >
-    <title>jplearning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kosugi|Mali&display=swap" rel="stylesheet">
+
+    <title>Document</title>
     <style>
-        html,
+        .top {
+            background: #2B3648;
+            color: white;
+            height: 300%;
+            line-height: 300%;
+            padding-left: 20px;
+        }
+
+        .slect {
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 20px;
+
+        }
+
+        .filter {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
         body {
-            font-size: 10px;
-            margin: 0 auto;
-            background: rgb(59, 212, 128);
-            text-align: center;
+            background: #FCFAF2;
+        }
+
+        .menu {
+            background: white;
+            margin-top: 20px;
+
         }
 
         footer {
-            font-size: 2em;
+            font-size: 1.2em;
             color: white;
+            float: right;
+            margin-top: 20px;
             animation: myfirst 5s;
             -moz-animation: myfirst 5s;
             -webkit-animation: myfirst 5s;
@@ -85,625 +99,599 @@
             }
         }
 
-        .eg {
-            font-family: 'Mali', cursive;
-        }
-
-        .jp {
-            font-family: 'Mali', cursive;
-            font-family: 'Kosugi', sans-serif;
-        }
-
-        header {
-            color: white;
-            width: 43%;
-            margin-top: 60px;
-            font-size: 2.8rem;
-            background: #08192D;
-            text-align: center;
+        .type1 {
+            font-size: 18px;
             display: inline-block;
-            border-radius: 50px;
-        }
-
-        h1 {
-            margin: 0.2em;
-        }
-
-
-
-        section {
-            display: flex;
-
-        }
-
-        article {
-            flex: 1 500px;
-            margin: 10px;
-            margin-top: 100px;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            left: 100px;
-        }
-
-        article:nth-child(2) {
-            margin: 10px;
-            margin-top: 0px;
-            flex: 0.5 200px;
-        }
-
-        h2 {
-            color: white;
-        }
-
-        .pic {
-            min-width: 100%;
-            height: 400px;
-            background: url(http://pngimg.com/uploads/teacher/teacher_PNG46.png) -30px no-repeat;
-            background-size: contain;
-            max-height: 100%;
-        }
-
-        .number {
-            border-radius: 10px 0 0 10px;
-            height: 150px;
-            color: white;
-            width: 50px;
-            line-height: 150px;
-            font-size: 50px;
-            background: #08192D;
-            text-shadow: 1px 1px 2px black;
-            box-shadow: 0px 10px 5px rgba(0, 0, 0, .5);
-            float: left;
+            width: 29%;
+            text-align: center;
         }
 
         .type {
-            height: 150px;
-            width: 370px;
-            line-height: 150px;
-            background: orange;
-            font-size: 50px;
-            margin: 0;
-            float: left;
-            box-shadow: 0px 10px 5px rgba(0, 0, 0, .5);
-            cursor: pointer;
-        }
-
-        .type:hover {
-
-            opacity: .9;
-        }
-
-        .type:active {
-            transform: scale(1.5);
-            -webkit-transform: scale(1.5);
-            transition-duration: 0.5s;
-            -webkit-transition-duration: 0.5s;
+            font-size: 18px;
+            display: inline-block;
+            width: 29%;
+            text-align: center;
         }
 
         .title {
-            border-radius: 0 10px 10px 0;
-            height: 150px;
-            width: 370px;
-            line-height: 150px;
-            background: white;
-            margin: 0;
+            font-size: 18px;
+            display: inline-block;
+            width: 29%;
+            text-align: center;
+        }
+
+        .title1 {
+            font-size: 18px;
+            display: inline-block;
+            width: 29%;
+            text-align: center;
+        }
+
+        .chinese {
+            font-size: 18px;
+            display: inline-block;
+            width: 29%;
+            text-align: center;
+            color: white;
             cursor: pointer;
-            float: left;
-            font-size: 50px;
-            color: #08192D;
-            box-shadow: 0px 10px 5px rgba(0, 0, 0, .5);
-            text-decoration-line: none;
-
-        }
-
-        .title:focus {
-            outline: 0px;
-        }
-
-        .title:hover {
-            color: orange;
-            background: rgba(255, 255, 255, .8);
-            transition-duration: 0.5s;
-            -webkit-transition-duration: 0.5s;
-        }
-
-        .title:active {
-
-            color: orangered;
-            transform: scale(1.5);
-            -webkit-transform: scale(1.5);
-            transition-duration: 0.5s;
-            -webkit-transition-duration: 0.5s;
-
-        }
-
-        .arrow {
-            height: 150px;
-            width: 45px;
-            line-height: 150px;
             font-weight: bold;
-            margin: 0;
-            float: left;
-            font-size: 50px;
-            color: orange;
-            text-decoration-line: none;
-            color: #08192D;
-            -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
         }
 
-        .arrow:hover {
-            color: orange;
-            opacity: 0.9;
-            text-shadow: 5px 10px 5px rgba(0, 0, 0, .5);
-            transform: rotate(360deg);
-            -webkit-transform: rotate(360deg);
-
-            transition-duration: 0.5s;
-            -webkit-transition-duration: 0.5s;
+        .chinese1 {
+            font-size: 18px;
+            display: inline-block;
+            width: 29%;
+            text-align: center;
         }
 
-        .arrow:active {
-            transition-duration: 0.2s;
-            -webkit-transition-duration: 0.2s;
+        .number {
+            font-size: 18px;
+            display: inline-block;
+            width: 7%;
+            text-align: center;
+            background: #2B3648;
+            color: white;
+        }
+
+
+        .number1 {
+            font-size: 18px;
+            display: inline-block;
+            width: 7%;
+            text-align: center;
+            background: #2B3648;
+            color: white;
+        }
+
+
+        .chinese:hover {
+            color: orange;
+        }
+
+        .chinese:active {
             color: orangered;
-            padding-top: 6px;
+            background: #e4e4e4;
+
 
         }
 
-        .left {
-            margin-left: 95px;
-            margin-right: 5px;
+        .menuItem {
+            border-top: 2px solid #e4e4e4;
+
         }
 
-        .right {
-            margin-left: 5px;
+
+
+
+        .container {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        @media (max-width:1485px) {
-            header {
-                font-size: 1.6rem;
+
+
+
+        .menuItem:nth-last-child()) {
+            border-radius: 0 0 10px 10px;
+        }
+
+        .up {
+            background: orange;
+            color: white;
+            font-weight: bold;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 0 20px 0 0;
+        }
+
+
+        .les {
+            float: right;
+            position: relative;
+            padding-top: 40px;
+            padding-left: 40px;
+            top: 60px;
+            right: 50px;
+            color: white;
+            height: 80px;
+            background: pink;
+            border: white 5px solid;
+            text-shadow: 2px 2px 1px #2B3648;
+        }
+
+        .link {
+            width: 120px;
+            height: 30px;
+            background: orange;
+            position: relative;
+            -moz-border-radius: 10px;
+            font-size: 12px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            position: fixed;
+            bottom: 10px;
+            left: 30px;
+            line-height: 28px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, .5);
+            cursor: pointer;
+        }
+
+        .link:hover {
+            opacity: .9;
+            color: orangered;
+            transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+        }
+
+        .link:before {
+            content: "";
+            position: absolute;
+            right: 98%;
+            top: 7.5px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-right: 10px solid orange;
+            border-bottom: 8px solid transparent;
+        }
+
+        a {
+            color: white;
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            text-decoration-line: none;
+
+            opacity: .9;
+
+        }
+
+        @media (max-width:420px) {
+
+            .title,
+            .title1 {
+                font-size: 12px;
+                width: 23%;
             }
 
-            article {
-                flex: 4;
-                height: 350px;
-                left: 50px;
+            .number,
+            .number1 {
+                font-size: 12px;
+                width: 10%;
+
+
             }
 
-            .number {
+
+            .type,
+            .type1 {
+                font-size: 12px;
+                width: 23%;
+            }
+
+            .chinese,
+            .chinese1 {
+                font-size: 12px;
+                width: 28%;
+            }
+
+            .up {
+                background: orange;
                 color: white;
-                width: 35px;
-                height: 100px;
-                font-size: 30px;
-                line-height: 100px;
+                font-weight: bold;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 0 20px 0 0;
             }
 
-            .type {
-                width: 220px;
-                height: 100px;
-                font-size: 30px;
-                line-height: 100px;
-            }
-
-            .title {
-                width: 220px;
-                height: 100px;
-                font-size: 30px;
-                line-height: 100px;
-            }
-
-            .arrow {
-                height: 50px;
-                width: 35px;
-                line-height: 100px;
-                font-size: 50px;
-            }
-
-
-            .left {
-                margin-left: 100px;
-                margin-right: 15px;
-            }
-
-            .right {
-                margin-left: 5px;
-            }
-        }
-
-        @media (max-width:1000px) {
-            header {
-                font-size: 1.3rem;
-            }
-
-            article {
-                height: 200px;
-                margin-top: 50px;
-            }
-
-            .number {
-                width: 20px;
-                height: 80px;
-                font-size: 15px;
-                line-height: 80px;
-            }
-
-            .type {
-                width: 150px;
-                height: 80px;
-                font-size: 15px;
-                line-height: 80px;
-            }
-
-            .title {
-                width: 150px;
-                height: 80px;
-                font-size: 15px;
-                line-height: 80px;
-            }
-
-            .arrow {
-                height: 80px;
-                width: 15px;
-                line-height: 80px;
-                font-size: 20px;
-            }
-
-
-
-            .arrow:active {
-                transition-duration: 0;
-                -webkit-transition-duration: 0;
-                padding-top: 0px;
+            .menuItem {
+                border-top: 1px solid #e4e4e4;
+                font-size: 10px;
 
             }
 
-            .left {
-                margin-left: 130px;
-                margin-right: 10px;
-            }
-
-            .right {
-                margin-left: 5px;
-            }
-        }
-
-
-
-        @media (max-width:800px) {
-            header {
-                font-size: 1rem;
-            }
-
-            article {
-                height: 200px;
-                margin-left: 150px;
-                margin-top: 0px;
-                left: 0px;
-            }
-
-
-
-            .number {
-                border-radius: 0;
-                width: 250px;
-                height: 35px;
-                font-size: 15px;
-                line-height: 35px;
-            }
-
-            .type {
-                width: 250px;
-                height: 35px;
-                font-size: 15px;
-                line-height: 35px;
-            }
-
-            .title {
-                border-radius: 0;
-                width: 250px;
-                height: 35px;
-                font-size: 15px;
-                line-height: 35px;
-            }
-
-            .title:hover {
-                transform: scale(2);
-                -webkit-transform: scale(2);
-                transition-duration: 0.5s;
-                -webkit-transition-duration: 0.5s;
-            }
-
-            .title:active {
-
-                transform: none;
-                -webkit-transform: none;
-                transition-duration: 0s;
-                -webkit-transition-duration: 0s;
-
-            }
-
-            .arrow {
-                height: 45px;
-                width: 250px;
-                line-height: 45px;
-                font-size: 25px;
-
-            }
-
-
-
-            .left {
-                margin: 0;
-            }
-
-            .right {
-                margin: 0;
-            }
-
-            .arrow:active {
-                padding-top: 0px;
-            }
-        }
-
-        @media (max-width:580px) {
-            article:nth-child(2) {
+            .les {
                 display: none;
-
             }
         }
 
-        @media (max-width:560px) {
-            article {
-                margin-left: 140px;
+        @media (max-width:230px) {
+
+            .title,
+            .title1 {
+                font-size: 8px;
+            }
+
+            .number,
+            .number1 {
+                font-size: 8px;
+
+
+            }
+
+
+            .type,
+            .type1 {
+                font-size: 8px;
+            }
+
+            .chinese,
+            .chinese1 {
+                font-size: 8px;
+            }
+
+            .up {
+                background: orange;
+                color: white;
+                font-weight: bold;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 0 20px 0 0;
+            }
+
+            .menuItem {
+                border-top: 1px solid #e4e4e4;
+                font-size: 8px;
+
+            }
+
+            .les {
+                display: none;
             }
         }
 
-        @media (max-width:530px) {
-            article {
-                margin-left: 125px;
-            }
-        }
-
-        @media (max-width:508px) {
-            article {
-                margin-left: 120px;
-            }
-        }
-
-        @media (max-width:480px) {
-            article {
-                margin-left: 105px;
-            }
-        }
-
-        @media (max-width:460px) {
-            article {
-                margin-left: 95px;
-            }
-        }
-
-        @media (max-width:430px) {
-            article {
-                margin-left: 85px;
-            }
-        }
-
-        @media (max-width:410px) {
-            article {
-                margin-left: 75px;
-            }
-        }
-
-        @media (max-width:380px) {
-            article {
-                margin-left: 65px;
-            }
-        }
-
-        @media (max-width:360px) {
-            article {
-                margin-left: 55px;
-            }
-        }
-
-        @media (max-width:340px) {
-            article {
-                margin-left: 45px;
-            }
-        }
-
-        @media (max-width:320px) {
-            article {
-                margin-left: 35px;
-            }
-        }
-
-        @media (max-width:305px) {
-            article {
-                margin-left: 25px;
-            }
-        }
-
-        @media (max-width:285px) {
-            article {
-                margin-left: 15px;
-            }
-        }
-
-        @media (max-width:270px) {
-            article {
-                margin-left: 5px;
-            }
-        }
-
-        @media (max-width:252px) {
-            article {
-                margin-left: 0px;
-            }
-        }
     </style>
 </head>
 
 <body>
     <div class="app">
-        <header>
-            <h1 class="eg">Japanese Learing.</h1>
-
-        </header>
-        <h2>點日文可出現翻譯，空白鍵可返回日文</h2>
         <section>
+            <div class="les">
+                    <a>
+                        <h1>{{input.lesson}}</h1>
+                    </a>
+                </div>
+            <h1 class="top">日本語学習</h1>
+            <div class="container">
+               
+                <div class="title2">
 
-            <article>
-                <div class="description">
+                    <div class="input form-inline">
+                        <div class="row">
 
-                    <a
-                        href="#"
-                        class="arrow left"
-                        @keyup.left='changeIndex(-1);jap(today.tittle)'
-                        @click.prevent='changeIndex(-1);jap(today.tittle)'
-                    >↫</a>
-                    <div class="menuItem white"></div>
-                    <span class="number">{{index +1}}</span>
-                    <span class="type">{{today.type}}</span>
-                    <a
-                        id='title'
-                        class="title"
-                        target="vue-iron"
-                        href="#"
-                        @click.prevent='chineses(today.chinese)'
-                        @keyup.enter='chineses(today.chinese)'
-                        @keyup.space='jap(today.tittle)'
-                    >{{today.tittle}} </a>
-                    <a
-                        href="#"
-                        class="arrow right"
-                        @keyup.right='changeIndex(1);jap(today.tittle)'
-                        @click.prevent='changeIndex(1);jap(today.tittle)'
-                    >↬</a>
-
+                            <select v-model='input.lesson' class="slect form-control">
+                                <option>第一課</option>
+                                <option>第二課</option>
+                                <option>第三課</option>
+                                <option>第四課</option>
+                                <option>第五課</option>
+                                <option>第六課</option>
+                                <option>第七課</option>
+                            </select>
+                            <input class='filter form-control' type="text" v-model.trim='input.chinese' placeholder="中文關鍵字">
+                        </div>
+                    </div>
                 </div>
 
-            </article>
-            <article>
-                <div class="pic"></div>
-            </article>
+                <div class="menu">
+                    <div class="up">
+                        <span class="number1">No.</span>
+                        <span class="type1">漢字</span>
+                        <span class="title1">純假名</span>
+                        <span class="chinese1">中文</span>
+                    </div>
+                    <div class="menuItem" v-for='(item,index) in titleMenu'>
+                        <span class="number">{{index +1}}</span>
+                        <span class="type">{{item.type}}</span>
+                        <span class="title">{{item.tittle}}</span>
+                        <span class="chinese">{{item.chinese}}</span>
+                    </div>
+                </div>
+                <a href="https://dylantsouy.github.io/jplearn/" target="_blank">
+                    <div class="link">單字卡連結</div>
+                </a>
+                <footer>Design by Dylan ®</footer>
+            </div>
+        </section>
 
     </div>
-    </section>
-    <footer>Design by Dylan ®</footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js'></script>
     <script>
         let data = {
             index: 0,
+            input: {
+                lesson: '第一課',
+                type: '',
+                tittle: '',
+                chinese: '',
+                linka: '',
+            },
             menu: [{
+                    lesson: '第一課',
                     type: '私',
                     tittle: 'わたし',
                     chinese: '我',
+                    linka: 'https://dylantsouy.github.io/jplearn/',
                 }, {
+                    lesson: '第一課',
                     type: '学生',
                     tittle: 'がくせい',
                     chinese: '學生',
                 },
                 {
+                    lesson: '第一課',
                     type: '嬉しい',
                     tittle: 'うれしい',
                     chinese: '開心',
                 },
                 {
+                    lesson: '第一課',
                     type: '犬',
                     tittle: 'いぬ',
                     chinese: '小狗',
                 },
                 {
+                    lesson: '第一課',
                     type: '賑やか',
                     tittle: 'にぎやか',
                     chinese: '熱鬧',
                 },
                 {
+                    lesson: '第一課',
                     type: '夜市',
                     tittle: 'よいち',
                     chinese: '夜市',
                 },
                 {
+                    lesson: '第一課',
                     type: '寒い',
                     tittle: 'さむい',
                     chinese: '冷',
                 },
                 {
+                    lesson: '第一課',
                     type: '今日',
                     tittle: 'きょう',
                     chinese: '今天',
                 },
                 {
+                    lesson: '第一課',
                     type: '大きい',
                     tittle: 'おおきい',
                     chinese: '大的',
                 },
                 {
+                    lesson: '第一課',
                     type: 'ご飯',
                     tittle: 'ごはん',
                     chinese: '飯',
                 },
                 {
+                    lesson: '第一課',
                     type: '食べる',
                     tittle: 'たべる',
                     chinese: '吃飯',
                 },
                 {
+                    lesson: '第一課',
                     type: '猫',
                     tittle: 'ねこ',
                     chinese: '貓',
                 },
                 {
+                    lesson: '第一課',
                     type: '寝る',
                     tittle: 'ねる',
                     chinese: '睡覺',
                 },
                 {
+                    lesson: '第一課',
                     type: 'コップ',
                     tittle: 'コップ',
                     chinese: '杯子',
                 },
+                //           第二課      //
+                {
+                    lesson: '第二課',
+                    type: '何',
+                    tittle: 'なん',
+                    chinese: '什麼',
+                },
+                {
+                    lesson: '第二課',
+                    type: '彼',
+                    tittle: 'かれ',
+                    chinese: '他',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'はい',
+                    tittle: 'はい',
+                    chinese: '是的',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'いいえ',
+                    tittle: 'いいえ',
+                    chinese: '不是的',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'これ',
+                    tittle: 'これ',
+                    chinese: '這個',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'それ',
+                    tittle: 'それ',
+                    chinese: '那個',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'あれ',
+                    tittle: 'あれ',
+                    chinese: '那一個',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'どれ',
+                    tittle: 'どれ',
+                    chinese: '哪個',
+                }, {
+                    lesson: '第二課',
+                    type: 'ここ',
+                    tittle: 'ここ',
+                    chinese: '這裡',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'そこ',
+                    tittle: 'そこ',
+                    chinese: '那裡',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'あそこ',
+                    tittle: 'あそこ',
+                    chinese: '那～裡',
+                },
+                {
+                    lesson: '第二課',
+                    type: 'どこ',
+                    tittle: 'どこ',
+                    chinese: '哪裡',
+                },
 
 
+
+
+
+
+                // 第三課 //
+                {
+                    lesson: '第三課',
+                    type: '社長',
+                    tittle: 'しゃちょう',
+                    chinese: '總經理',
+                },
+                {
+                    lesson: '第三課',
+                    type: '社員',
+                    tittle: 'しゃいん',
+                    chinese: '職員',
+                },
+                {
+                    lesson: '第三課',
+                    type: '先生',
+                    tittle: 'せんせい',
+                    chinese: '老師(自,他稱)',
+                },
+                {
+                    lesson: '第三課',
+                    type: '教師',
+                    tittle: 'きょうし',
+                    chinese: '老師(自稱)',
+                },
+                {
+                    lesson: '第三課',
+                    type: '病院',
+                    tittle: 'びょういん',
+                    chinese: '醫院',
+                },
+                {
+                    lesson: '第三課',
+                    type: '喫茶店',
+                    tittle: 'きっさてん',
+                    chinese: '咖啡廳',
+                },
+                {
+                    lesson: '第三課',
+                    type: '学校',
+                    tittle: 'がっこう',
+                    chinese: '學校',
+                },
+                {
+                    lesson: '第三課',
+                    type: 'ジュース',
+                    tittle: 'ジュース',
+                    chinese: '果汁',
+                },
+                {
+                    lesson: '第三課',
+                    type: '小説',
+                    tittle: 'しょうせつ',
+                    chinese: '小說',
+                },
+                {
+                    lesson: '第三課',
+                    type: 'ノート',
+                    tittle: 'ノート',
+                    chinese: '筆記本',
+                },
+                {
+                    lesson: '第三課',
+                    type: '車',
+                    tittle: 'くるま',
+                    chinese: '車子',
+                },
 
 
 
             ]
         }
-
-        let app = new Vue({
+        var app = new Vue({
             el: '.app',
             data: data,
             computed: {
-                today() {
-                    return this.menu[this.index]
-                }
-            },
-            methods: {
-                chineses: function (trans) {
-                    var gg = document.getElementById('title');
-                    gg.innerHTML = trans;
-                },
-                jap: function (qq) {
-                    var ll = document.getElementById('title');
-                    ll.innerHTML = qq;
-                },
-                changeIndex: function (change) {
-                    this.index += change;
-
-                    if (this.index < 0) {
-                        this.index = this.menu.length - 1;
-
-                    } else if (this.index > this.menu.length - 1) {
-                        this.index = 0
+                typeMenu() {
+                    if (this.input.lesson !== '全部') {
+                        return this.menu.filter(item => {
+                            return item.lesson === this.input.lesson
+                        })
+                    } else {
+                        return this.menu
                     }
                 },
+                titleMenu() {
+                    if (this.input.chinese) {
+                        return this.typeMenu.filter(item => {
+                            let content = item.chinese.toLowerCase()
+                            let keyword = this.input.chinese.toLowerCase()
+                            return content.indexOf(keyword) !== -1
+                        })
+                    } else {
+                        return this.typeMenu
+                    }
+                },
+
             }
         })
+
     </script>
 </body>
 
